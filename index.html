@@ -5,11 +5,18 @@
     <div style="font-size:16px">これはWebViewのテストです。>
     </div>
     </br>
-    <input type="button" value="Say hello" onClick="showAndroidToast('Hello Android!')" />
+    <div style="font-size:16px">Native→JS <input id="asynchronusResult"></div>
+    </br>
+　  <input type="button" value="Say hello" onClick="showAndroidToast('Hello Android!')" />
 
     <script type="text/javascript">
         function showAndroidToast(toast) {
             window.webkit.messageHandlers.callbackHandler.postMessage(toast);
+        }
+
+        function callFromNative(value) {
+            var element = document.getElementById("asynchronusResult");
+            element.value = value;
         }
     </script>
 </body>
