@@ -7,7 +7,7 @@
 
     <script type="text/javascript">
         function showAndroidToast(toast) {
-            window.webkit.messageHandlers.callbackHandler.showToast(toast);
+            window.webkit.messageHandlers.callbackHandler.postMessage(toast);
         }
     </script>
 </body>
