@@ -8,8 +8,7 @@
     <div style="font-size:16px">Native→JS</div>
     <input id="asynchronusResult" type="text" width="100%">
     </br>
-　  <input type="button" value="Say hello" onClick="showAndroidToast('Hello WevToNatice!')" />
-
+    <input type="button" value="Say hello" onClick="showAndroidToast('Hello WevToNatice!')" />
     <script type="text/javascript">
         function showAndroidToast(toast) {
             window.webkit.messageHandlers.helloAppCallback.postMessage(toast);
