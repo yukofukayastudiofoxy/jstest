@@ -10,7 +10,10 @@
     <input type="button" value="Nativeに送る" onClick="showAndroidToast('Hello WebToNative!')" />
     <script type="text/javascript">
         function showAndroidToast(toast) {
+            //iOS
             window.webkit.messageHandlers.helloAppCallback.postMessage(toast);
+            //Andorid
+            helloAppCallback.postMessage(toast);
         }
 
         function helloWeb(value) {
